@@ -1,5 +1,6 @@
 import "./App.css";
 import WeatherForecast from "./components/WeatherForecast/WeatherForecast";
+import WeatherIcon from "./components/WeatherForecast/WeatherIcon";
 
 
 const weatherForecasts = [
@@ -49,9 +50,10 @@ const App = () => {
     <section>
        {weatherForecasts.map((weatherForecast) => (
           <WeatherForecast
+            key={weatherForecast.day}
             day={weatherForecast.day}
-            image={weatherForecast.img}
-            imageAlt={weatherForecast.imgAlt}
+            img={weatherForecast.img}
+            imgAlt={weatherForecast.imgAlt}
             conditions={weatherForecast.conditions}
             time={weatherForecast.time}
           />
